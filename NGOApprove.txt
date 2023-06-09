@@ -1,0 +1,8 @@
+SELECT NGO.NGOID, NGO.NGOName, NGO.NGOAddress, NGO.NGOEmail, NGO.NGOMobile, NGO.RegNo, Sector.SectorName, NGOType.NGOType, States.StateName, Districts.DistrictName, NGO.NGODated
+FROM   NGO INNER JOIN
+             Sector ON NGO.SectorID = Sector.SectorID INNER JOIN
+             NGOType ON NGO.NGOTypeID = NGOType.NGOTYPEID INNER JOIN
+             States ON NGO.NGOTypeID = States.StateID INNER JOIN
+             Districts ON NGO.DistrictID = Districts.DistrictID
+WHERE (NGO.NGOActive = 1)
+ORDER BY NGO.NGODated

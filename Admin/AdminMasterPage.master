@@ -1,0 +1,201 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="MyMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+   <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.5.0.min.js"></script>
+    <script src="../Scripts/popper.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    
+    <title></title>
+    <style type="text/css">
+       
+        p {
+            padding-left: 80px;
+        }
+
+        Container {
+            margin-left: 80%;
+            margin-right: 80%;
+        }
+
+        body {
+            margin-left: 10px;
+            margin-right:10px;
+            background-color: #d9d9d9;
+        }
+
+       
+        .navbar-custom{
+            height:25px;
+             border-radius:10px;
+        }
+        .table-custom{
+            height:480px;
+        }
+        .box{
+           
+            transition: transform 0.8s;
+        }
+        .box:hover{
+            transform:scale(1.2);
+            }
+        .box1{
+            color:white;
+        }
+        .box1:hover{
+            
+            background-color:grey;
+            }
+        i {
+            
+            height:40px;
+            width: 20px;
+             padding:3px 17px;       
+            color: white;
+        }
+       .btn1{
+           font-size:18px;    
+           font-weight:bold;
+               font-family:Arial;
+               border:2px solid white;
+               color:white;
+               border-radius:4px;
+       }
+       btnpadding{
+           padding-bottom:15px;
+       }
+       
+        
+        .auto-style1 {
+            width: 1081px;
+        }
+       
+        
+        .auto-style3 {
+            height: 4px;
+        }
+       
+        
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                 <div style="background-color: white">
+                     
+            <center>
+                <asp:Image ID="Image1" runat="server" Height="81px" Width="128px" src="../Images/logo.png" ImageAlign="Middle" Style="text-align: center;padding-left:20px" />
+            </center>
+           <table class="table" style="height:auto">
+               <tr>
+                        <td style="background-color:mediumorchid;height:4pt;border-radius:20px">
+
+                       <nav class="navbar navbar-expand-lg navbar-light bg-mediumorchid  navbar-custom ">
+                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">    
+                           <li class="nav-item">
+                             <a class="nav-link" href="AdminDefault.aspx" style="color:white">Home</a>
+                           </li>
+                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+              
+        <li class="nav-item">
+            <a class="nav-link box1" href="." style="color:white"><i class="bi bi-box-arrow-right"></i>&nbsp;Log Out</a>
+      </li>
+        </ul>
+                                 </div>
+                       </nav>
+                
+                        </td>
+                 </tr>
+                    <tr>
+                        <td>
+                            <table cellpadding=".15rem" cellspacing="0" class="table table-custom" style="width: 1268px">
+                                <tr>
+                                    <td style="width: 200px; height:370px; background-color:mediumorchid">
+                                       <center>
+                                        <img src="../Images/Admin.jpg" style=" Width:150px; Height:110px;margin-bottom:0px"/>
+                                       </center>
+
+                                         <br />
+                                        <center>
+                                         <asp:HyperLink ID="hypDonationList" runat="server" Height="30px" Width="194px" ForeColor="White" NavigateUrl="~/Admin/DonationList.aspx" ><i class="bi bi-file-check-fill"></i>Donation List</asp:HyperLink>
+                                          <hr />                                   
+                                        </center>
+                                        <center>
+                                         <asp:HyperLink ID="hypNGoApprove" runat="server" Height="30px" Width="194px" ForeColor="White" NavigateUrl="~/Admin/ApproveNGO.aspx" ><i class="bi bi-file-check-fill"></i>Approve NGO</asp:HyperLink>
+                                          <hr />                                   
+                                        </center>
+                                      
+                                        <center>
+                                           <asp:HyperLink ID="btnManageNGOs" runat="server" Height="30px" Width="194px" ForeColor="White" NavigateUrl="~/Admin/ManageNGOs.aspx" > <i class="bi bi-box-arrow-in-right"></i>Manage NGOs</asp:HyperLink>
+                                         <hr />
+                                        </center>
+                                       
+                                        <center>
+                                           <asp:HyperLink ID="btnManageUsers" runat="server" Height="30px" Width="194px" ForeColor="White" Font-Underline="False" NavigateUrl="~/Admin/ManageUsers.aspx" > <i class="bi bi-box-arrow-in-right"></i>Manage Users</asp:HyperLink>
+                                         <hr />
+                                        </center> 
+                                        <center>
+                                            <asp:HyperLink ID="btnAddNGO" runat="server" Height="30px" Width="194px" ForeColor="White" NavigateUrl="~/Admin/AddNGO.aspx" Font-Underline="False" > <i class="bi-alarm bi-person-plus-fill"></i>Add NGO</asp:HyperLink>
+                                          <hr />  
+                                       </center>   
+                                         <center>
+                                             <asp:HyperLink ID="btnAddUser" runat="server" Height="30px" Width="194px" ForeColor="White" NavigateUrl="~/Admin/AddUser.aspx" Font-Underline="False" >  <i class="bi-alarm bi-person-plus-fill"></i> Add User</asp:HyperLink>
+                                            
+                                            <hr />  
+                                        </center> 
+                                          
+                                    
+                                    </td>
+                                    <td style="padding:.15rem">
+                                        <table class="auto-style3">
+                                            <tr>
+                                                <td class="auto-style1">
+                                                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                                                    </asp:ContentPlaceHolder>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                                       
+                                                    
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            
+           </div>     
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </form>
+</body>
+</html>
