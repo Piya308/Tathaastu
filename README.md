@@ -5,3 +5,5 @@ poor people for full-filling theirs needs and live a good life as much as they
 can. Currently, we will provide the services of login and registration to
 donor and NGO’s. Portal will be user-friendly, reliable and co-operative.
 The motto of this portal is to connect donors directly with NGO’s.**
+
+![image](https://github.com/Piya308/Tathaastu/assets/70933451/93cc40dd-a585-4f36-bd66-f32efb146180)
